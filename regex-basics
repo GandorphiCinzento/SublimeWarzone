@@ -1,0 +1,28 @@
+# Selectores
+  \       - caracter de 'escape'
+  .       - qualquer caracter
+  \d      - digitos (0-9)
+  \D      - NÃO digitos (0-9)
+  \w      - caracteres de palavras (a-z, A-Z, 0-9, _)
+  \W      - NÃO caracteres de palavras
+  \s      - espaços em branco (space, tab, newline)
+  \S      - NÃO espaços em branco
+
+# Arranjos
+  \b      - marcador de palavras
+  \B      - NÃO marcador de palavras
+  ^       - inicio da linha
+  $       - fim da linha
+
+# Conjustos
+  []      - cesta de escolhas
+  [^ ]    - NÃO cesta de escolhas
+  |       - ou
+  ( )     - grupos
+
+# Multiplicadores
+  *       - 0 ou mais
+  +       - 1 ou mais
+  ?       - 0 ou 1
+  {3}     - quantidade exata
+  {3,4}   - minimo e maximo

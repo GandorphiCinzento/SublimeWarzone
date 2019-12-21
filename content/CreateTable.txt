@@ -1,0 +1,16 @@
+Create Table pessoa(
+  pessoaID int,
+  nome varchar(255),
+  sobrenome varchar(255),
+  idade int,
+  nascimento Date,
+  sexo varchar(255),
+  paisNascimento varchar(255),
+  endereco varchar(255),
+  cidade varchar(255), 
+  uf varchar(2), 
+  pais varchar(255),
+  corPreferida varchar(255),
+  comidaPreferida varchar(255),
+  carroPreferido varchar(255),
+);

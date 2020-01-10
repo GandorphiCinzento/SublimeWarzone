@@ -1,0 +1,54 @@
+        public virtual string Nome { get; set; }
+
+
+        public virtual string Telefone { get; set; }
+
+
+        public virtual string Whatsapp { get; set; }
+
+
+        public virtual string Email { get; set; }
+
+
+        public virtual string Facebook { get; set; }
+
+
+        public virtual string Instagram { get; set; }
+
+
+        public virtual string Site { get; set; }
+
+
+        public virtual bool Padrao { get; set; } = false;
+
+        [JsonIgnore]
+        public virtual Empresas_MD Empresas { get; set; }
+        public virtual int Empresa_id
+        {
+            get { return Empresas == null? 0: Empresas.Id; }
+            set { if (Empresas == null) Empresas = new Empresas_MD(); Empresas.Id = value; }
+        }
+
+        [JsonIgnore]
+        public virtual Unidades_MD Unidade { get; set; }
+        public virtual int? Unidade_id
+        {
+            get { if (Unidade == null) return null; else return Unidade.Id; }
+            set { if (Unidade == null) Unidade = new Unidades_MD(); Unidade.Id = value.Value; }
+        }
+
+        [JsonIgnore]
+        public virtual Cidades_MD Cidade { get; set; }
+        public virtual int? Cidade_id
+        {
+            get { if (Cidade == null) return null; else return Cidade.Id; }
+            set { if (Cidade == null) Cidade = new Cidades_MD(); Cidade.Id = value.Value; }
+        }
+
+
+
+
+join Grupo_Regras  gr on g.Id = gr.Grupo_Id
+join Regras  r on gr.Regra_Id = r.Id
+join Permissao_Regras  rp on r.Id = rp.Regra_Id
+join Permissoes  p on rp.Permissao_Id = p.Id
